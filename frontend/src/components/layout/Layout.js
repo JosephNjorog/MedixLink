@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Header, Sidebar, Footer, Loader } from '../common';
+import { Header, Sidebar, Footer, Loader } from '../common/Common';
 import { AlertCircle, X } from 'lucide-react';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 
