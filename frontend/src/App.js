@@ -1,29 +1,38 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from './redux/store';
+
 import MainLayout from './components/layout/MainLayout';
 import AuthLayout from './components/layout/AuthLayout';
-import LoginPage from './pages/LoginPage';
 import DashboardPage from './pages/DashboardPage';
-import PackageSelection from './components/Transactions/PackageSelection';
+import AppointmentPage from './pages/AppointmentPage';
+import HealthRecordsPage from './pages/HealthRecordsPage';
+import InsurancePage from './pages/InsurancePage';
+import LoginPage from './pages/LoginPage';
+import ProfilePage from './pages/ProfilePage';
+import TelemedicinePage from './pages/TelemedicinePage';
+import TransactionPage from './pages/TransactionPage';
 
-function App() {
+const App = () => {
   return (
-    <Router>
-      <Routes>
-        {/* Auth routes */}
-        <Route element={<AuthLayout />}>
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/packages" element={<PackageSelection />} />
-        </Route>
-        
-        {/* Main app routes */}
-        <Route element={<MainLayout />}>
-          <Route path="/" element={<DashboardPage />} />
-          {/* Other routes will be added as we develop features */}
-        </Route>
-      </Routes>
-    </Router>
+    <Provider store={store}>
+      <Router>
+        <Switch>
+          <Route exact path="/login" component={LoginPage} />
+          <AuthLayout>
+            <Route exact path="/" component={DashboardPage} />
+            <Route path="/appointments" component={AppointmentPage} />
+            <Route path="/health-records" component={HealthRecordsPage} />
+            <Route path="/insurance" component={InsurancePage} />
+            <Route path="/profile" component={ProfilePage} />
+            <Route path="/telemedicine" component={TelemedicinePage} />
+            <Route path="/transactions" component={TransactionPage} />
+          </AuthLayout>
+        </Switch>
+      </Router>
+    </Provider>
   );
-}
+};
 
 export default App;
