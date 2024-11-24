@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './redux/store';
 
-import MainLayout from './components/layout/MainLayout';
-import AuthLayout from './components/layout/AuthLayout';
+import MainLayout from './components/layout/Layout';
+import AuthLayout from './components/layout/Layout';
 import DashboardPage from './pages/DashboardPage';
 import AppointmentPage from './pages/AppointmentPage';
 import HealthRecordsPage from './pages/HealthRecordsPage';
