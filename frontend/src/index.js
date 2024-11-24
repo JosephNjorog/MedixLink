@@ -4,11 +4,11 @@ import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
 import App from './App';
 import './assets/styles/main.css';
+import subscriptionReducer from './redux/slices/subscriptionSlice';
 
-// We'll add reducers as we develop features
 const store = configureStore({
   reducer: {
-    // reducers will be added here
+    subscription: subscriptionReducer,
   },
 });
 
