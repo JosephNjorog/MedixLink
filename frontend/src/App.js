@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import MainLayout from './components/layout/MainLayout';
 import AuthLayout from './components/layout/AuthLayout';
-import LoginPage from './pages/LoginPage';
-import DashboardPage from './pages/DashboardPage';
+// import LoginPage from './pages/LoginPage';
+// import DashboardPage from './pages/DashboardPage';
 import PackageSelection from './components/Transactions/PackageSelection';
 
 function App() {
