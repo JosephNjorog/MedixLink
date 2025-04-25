@@ -5,7 +5,7 @@ const FETCH_PROFILE_SUCCESS = 'FETCH_PROFILE_SUCCESS';
 const FETCH_PROFILE_FAILURE = 'FETCH_PROFILE_FAILURE';
 const UPDATE_PROFILE_SUCCESS = 'UPDATE_PROFILE_SUCCESS';
 const UPDATE_PROFILE_FAILURE = 'UPDATE_PROFILE_FAILURE';
-const CHANGE_PASSWORD_REQUEST = 'CHANGE_PASSWORD_REQUEST';
+const ChangePasswordRequest = 'ChangePasswordRequest';
 const CHANGE_PASSWORD_SUCCESS = 'CHANGE_PASSWORD_SUCCESS';
 
 const initialState = {
@@ -42,7 +42,7 @@ const initialState = {
           error: action.payload
         };
       
-      case CHANGE_PASSWORD_REQUEST:
+      case ChangePasswordRequest:
         return {
           ...state,
           loading: true,

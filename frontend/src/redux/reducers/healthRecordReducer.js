@@ -4,7 +4,7 @@ const ADD_HEALTH_RECORD = 'ADD_HEALTH_RECORD';
 const UPDATE_HEALTH_RECORD = 'UPDATE_HEALTH_RECORD';
 const FETCH_HEALTH_RECORDS_SUCCESS = 'FETCH_HEALTH_RECORDS_SUCCESS';
 const FETCH_RECORD_DETAIL_SUCCESS = 'FETCH_RECORD_DETAIL_SUCCESS';
-const ADD_HEALTH_RECORD_SUCCESS = 'ADD_HEALTH_RECORD_SUCCESS';
+const AddHealthRecord = 'AddHealthRecord';
 const UPDATE_HEALTH_RECORD_SUCCESS = 'UPDATE_HEALTH_RECORD_SUCCESS';
 const FETCH_HEALTH_RECORDS_FAILURE = 'FETCH_HEALTH_RECORDS_FAILURE';
 const FETCH_RECORD_DETAIL_FAILURE = 'FETCH_RECORD_DETAIL_FAILURE';
@@ -51,7 +51,7 @@ const initialState = {
           currentRecord: action.payload
         };
       
-      case ADD_HEALTH_RECORD_SUCCESS:
+      case AddHealthRecord:
         return {
           ...state,
           loading: false,

@@ -7,7 +7,7 @@ export const FETCH_PROFILE_FAILURE = 'FETCH_PROFILE_FAILURE';
 export const UPDATE_PROFILE_REQUEST = 'UPDATE_PROFILE_REQUEST';
 export const UPDATE_PROFILE_SUCCESS = 'UPDATE_PROFILE_SUCCESS';
 export const UPDATE_PROFILE_FAILURE = 'UPDATE_PROFILE_FAILURE';
-export const CHANGE_PASSWORD_REQUEST = 'CHANGE_PASSWORD_REQUEST';
+export const ChangePasswordRequest = 'ChangePasswordRequest';
 export const CHANGE_PASSWORD_SUCCESS = 'CHANGE_PASSWORD_SUCCESS';
 export const CHANGE_PASSWORD_FAILURE = 'CHANGE_PASSWORD_FAILURE';
 
@@ -46,7 +46,7 @@ export const updateProfile = (profileData) => async (dispatch) => {
 
 export const changePassword = (passwordData) => async (dispatch) => {
   try {
-    dispatch({ type: CHANGE_PASSWORD_REQUEST });
+    dispatch({ type: ChangePasswordRequest });
     await axios.put('/api/profile/password', passwordData);
     dispatch({ type: CHANGE_PASSWORD_SUCCESS });
   } catch (error) {
