@@ -17,6 +17,7 @@ const DashboardPage = () => {
     // dispatch(fetchAppointments());
     // dispatch(fetchHealthRecords());
     // dispatch(fetchInsuranceInfo());
+    //dispatch(fetchhealthdata()))
   }, [dispatch]);
 
   const healthData = [
